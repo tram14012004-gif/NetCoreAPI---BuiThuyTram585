@@ -6,7 +6,7 @@ namespace DemoMVC.Controllers
     {
         // Mở trang
         [HttpGet]
-        public IActionResult Hello()
+        public IActionResult Form()
         {
             return View();
         }
