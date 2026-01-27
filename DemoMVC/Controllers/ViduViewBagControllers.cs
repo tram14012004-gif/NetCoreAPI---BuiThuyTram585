@@ -13,7 +13,7 @@ public class ViduViewBagController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult ViduViewBag()
     {
         ViewBag.Message = "Xin chào, đây là trang của Trâm";
         ViewBag.Year = 2004;
