@@ -13,7 +13,7 @@ namespace DemoMVC.Controllers
 
         // Nhận dữ liệu từ form
         [HttpPost]
-        public IActionResult Index(string fullName)
+        public IActionResult Form(string fullName)
         {
             ViewBag.Message = "Xin chào " + fullName;
             return View();
