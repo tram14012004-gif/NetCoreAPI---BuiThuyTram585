@@ -8,7 +8,7 @@ public class ViduViewBagController : Controller
 {
     private readonly ILogger<ViduViewBagController> _logger;
 
-    public DemoController(ILogger<ViduViewBagController> logger)
+    public ViduViewBagController(ILogger<ViduViewBagController> logger)
     {
         _logger = logger;
     }
