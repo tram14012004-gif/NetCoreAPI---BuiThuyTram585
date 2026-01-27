@@ -4,11 +4,11 @@ using DemoMVC.Models;
 
 namespace DemoMVC.Controllers;
 
-public class HomeController : Controller
+public class ViewBagController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<ViewBagController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public ViewBagController(ILogger<ViewBagController> logger)
     {
         _logger = logger;
     }
