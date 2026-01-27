@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-public class ViduViewBagController : Controller
+public class ViewBagController : Controller
 {
     public IActionResult Vidu()
     {
