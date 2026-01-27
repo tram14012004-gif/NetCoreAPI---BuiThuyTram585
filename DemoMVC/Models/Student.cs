@@ -1,8 +1,8 @@
-namespace DemoMVC.Models;
+namespace DemoMVC.Models
 {
     public class Student
     {
-        public string StudentsCode { get; set; }
-        public string fullName { get; set; }
+        public string FullName { get; set; }
+        public string StudentCode { get; set; }
     }
 }
