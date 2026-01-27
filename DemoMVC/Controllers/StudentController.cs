@@ -1,19 +1,19 @@
+using Microsoft.AspNetCore.Mvc;
+
 namespace DemoMVC.Controllers
 {
-
-    using Microsoft.AspNetCore.Mvc;
-
     public class StudentController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-        
+
         [HttpPost]
-         public IActionResult Index(string fullName, string StudentsCode)
+        public IActionResult Index(string fullName, string StudentCode)
         {
-            ViewBag.Message = "Xin chào " + fullName;
+            ViewBag.Message = "Xin chào " + fullName + " - MSV: " + StudentCode;
             return View();
         }
     }
