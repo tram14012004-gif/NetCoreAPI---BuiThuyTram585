@@ -15,8 +15,6 @@ public class DemoController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.Message = "Xin chào, đây là trang Home";
-        ViewBag.Year = 2026;
         return View();
     }
 
