@@ -1,20 +1,21 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace DemoMVC.Controllers
 {
+
+    using Microsoft.AspNetCore.Mvc;
+    using DemoMVC.Models.Entities;
+
     public class StudentController : Controller
     {
-        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-
         [HttpPost]
-        public IActionResult Index(string fullName, string StudentCode)
+        public IActionResult Index(Student std)
         {
-            ViewBag.Message = "Xin chào " + fullName + " - MSV: " + StudentCode;
+            ViewBag.ThongBao = std.StudentCode + " - " + std.FullName;
             return View();
         }
     }
+
 }

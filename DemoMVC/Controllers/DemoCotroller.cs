@@ -1,27 +1,21 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DemoMVC.Models;
-
-namespace DemoMVC.Controllers;
-
-public class DemoController : Controller
+namespace DemoMVC.Controllers
 {
-    private readonly ILogger<DemoController> _logger;
-
-    public DemoController(ILogger<DemoController> logger)
+    public class DemoController : Controller
     {
-        _logger = logger;
-    }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(string FullName)
+        {
+            ViewBag.Name = "Hello " + FullName;
+            return View();
+        }
+        public IActionResult Test()
+        {
+            return View();
+        }
     }
 }
