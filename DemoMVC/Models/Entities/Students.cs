@@ -1,13 +1,16 @@
-
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+
 namespace DemoMVC.Models.Entities
 {
     public class Student
     {
         [Key]
-        public string StudentCode { get; set; } = default!;
-        public string FullName { get; set; } = default!;
+        public int Id { get; set; }
 
+        [Required]
+        public string FullName { get; set; }
+
+        [Required]
+        public string StudentCode { get; set; }
     }
 }
