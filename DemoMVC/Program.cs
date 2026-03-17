@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using DemoMVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
 builder.Services.AddControllersWithViews();
 
-// Add DbContext (SQLite)
-builder.Services.AddDbContext<DbContext>(options =>
+// Add DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=database.db"));
 
 var app = builder.Build();

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -19,11 +19,11 @@ namespace DemoMVC.Migrations
                 oldClrType: typeof(string),
                 oldType: "TEXT",
                 oldNullable: true);
+        }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
             migrationBuilder.AlterColumn<string>(
                 name: "FullName",
                 table: "Students",
