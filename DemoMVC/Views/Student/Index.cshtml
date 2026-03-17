@@ -1,20 +1,21 @@
-@model IEnumerable<DemoMVC.Models.Entities.Student>
-<h2>Danh sach Sinh vien</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>Ma SV</th>
-        <th>Ho Ten SV</th>
-        <th>Actions</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.StudentCode</td>
-            <td>@item.FullName</td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.StudentCode" class="btn btn-warning">Edit</a>
-                <a asp-action="Delete" asp-route-id="@item.StudentCode" class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
-    }
+@model IEnumerable<DemoMVC.Models.Student>
+
+<h2>Student List</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Full Name</th>
+    <th>Student Code</th>
+</tr>
+
+@foreach (var item in Model)
+{
+<tr>
+    <td>@item.Id</td>
+    <td>@item.FullName</td>
+    <td>@item.StudentCode</td>
+</tr>
+}
+
 </table>
